@@ -1,12 +1,13 @@
 #include <iostream>
+#include "card.hpp"
 
 using namespace std;
 namespace ariel {
 
 }
 class Player {
-    string *deck;
-    string topCard;
+    Card *deck;
+    Card topCard;
 public:
     Player(string name);
 
@@ -16,5 +17,6 @@ public:
 
     void printTurn();
 
+    void toString();
 
 };

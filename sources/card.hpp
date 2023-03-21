@@ -8,4 +8,5 @@ class Card {
 public:
     Card(string value, string symbol);
 
+    void toString();
 };

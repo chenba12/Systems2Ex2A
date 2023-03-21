@@ -25,4 +25,6 @@ public:
 
     void printStats();
 
+    void toString();
+
 };
