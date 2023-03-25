@@ -2,11 +2,14 @@
 
 using namespace ariel;
 
-Card::Card(string value, string symbol) {}
+Card::Card(std::string value, std::string symbol) {}
 
-Card::Card(Card &card);
+Card::Card(Card &card) {
+    this->value = card.value;
+    this->symbol = card.symbol;
+}
 
-Card::Card();
+Card::Card() {}
 
 Card::~Card() {}
 
@@ -14,10 +17,10 @@ int Card::checkWinner(Card card) { return 0; }
 
 std::string getValue() { return ""; };
 
-void setValue(string value) {};
+void setValue(std::string value) {};
 
 std::string getSymbol() { return ""; }
 
-void setSymbol(string symbol) {}
+void setSymbol(std::string symbol) {}
 
 std::string Card::toString() { return ""; }

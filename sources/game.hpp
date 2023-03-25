@@ -5,6 +5,7 @@
 #include "player.hpp"
 #include "card.hpp"
 #include <list>
+#include <array>
 
 namespace ariel {
 
@@ -17,7 +18,7 @@ namespace ariel {
         int numberOfTurns;
         bool isPlaying;
         int winner;
-        std::list <ariel::Card> gameDeck;
+        std::array<ariel::Card, 52> gameDeck;
         int numberOfDraws;
 
     public:
@@ -55,7 +56,7 @@ namespace ariel {
 
         void setIsPlaying();
 
-        std::list <ariel::Card> getGameDeck();
+        std::array<ariel::Card, 52> getGameDeck();
 
         void createGameDeck();
 

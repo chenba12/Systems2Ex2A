@@ -1,7 +1,9 @@
 #include "game.hpp"
+#include "array"
+#include "list"
 
 using namespace ariel;
-const static std::string cards[13] = {"ace", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen",
+const static std::string cards[14] = {"ace", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen",
                                       "King"};
 const static std::string symbols[4] = {"Hearts", "Spades", "Diamonds", "Clubs"};
 
@@ -37,7 +39,7 @@ bool Game::getIsPlaying() { return this->isPlaying; }
 
 void Game::setIsPlaying() {}
 
-list <Card> Game::getGameDeck() { return this->gameDeck; }
+std::array<ariel::Card, 52> Game::getGameDeck() { return this->gameDeck; }
 
 void Game::createGameDeck() {}
 

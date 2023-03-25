@@ -4,12 +4,13 @@
 #include <iostream>
 #include "card.hpp"
 #include <list>
+#include "array"
 
 namespace ariel {
     class Player {
     private:
         std::string playerName;
-        std::list <ariel::Card> deck;
+        std::array<ariel::Card, 26> deck;
         Card topCard;
         int cardsTaken;
         int getSize;
@@ -33,7 +34,7 @@ namespace ariel {
 
         std::string toString();
 
-        std::list <Card> getDeck();
+        std::array<ariel::Card, 26> getDeck();
 
         void setDeck(Card *deck);
 
