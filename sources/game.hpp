@@ -2,29 +2,33 @@
 #include "player.hpp"
 
 using namespace std;
+namespace ariel {
 
-class Game {
-    Player p1;
-    Player p2;
-    string *turnsPlayed;
-    int numberOfTurns;
-    string winner;
+    class Game {
+        Player player1;
+        Player player2;
+        string *turnsPlayed;
+        int numberOfTurns;
+        string winner;
 
-public:
-    Game(Player p1, Player p2);
+    public:
+        Game(Player &player1, Player &player2);
 
-    void playTurn();
+        ~Game();
 
-    void printLastTurn();
+        void playTurn();
 
-    void playAll();
+        void printLastTurn();
 
-    void printWiner();
+        void playAll();
 
-    void printLog();
+        void printWiner();
 
-    void printStats();
+        void printLog();
 
-    void toString();
+        void printStats();
 
-};
+        void toString();
+
+    };
+}

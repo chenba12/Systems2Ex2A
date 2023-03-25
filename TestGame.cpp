@@ -1,3 +1,8 @@
-//
-// Created by chen on 3/21/23.
-//
+#include "doctest.h"
+#include "sources/player.hpp"
+#include "sources/game.hpp"
+#include "sources/card.hpp"
+
+TEST_CASE(){
+
+}
