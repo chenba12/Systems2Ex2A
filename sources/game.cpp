@@ -23,6 +23,8 @@ void Game::printStats() {}
 
 std::string Game::toString() { return ""; }
 
+std::list <std::string> Game::getTurnsLog() { return this->turnsLog; }
+
 Player Game::getPlayer1() { return this->player1; }
 
 void Game::setPlayer1(Player player) {}
@@ -45,7 +47,7 @@ int Game::getNumberOfTurns() { return this->numberOfTurns; }
 
 void Game::setNumberOfTurns() {}
 
-bool Game::getWinner() { return this->winner; }
+int Game::getWinner() { return this->winner; }
 
 void Game::setWinner() {}
 

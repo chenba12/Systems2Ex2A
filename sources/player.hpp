@@ -33,17 +33,13 @@ namespace ariel {
 
         std::string toString();
 
-        Card *getDeck();
+        std::list <Card> getDeck();
 
         void setDeck(Card *deck);
 
         Card getTopCard();
 
         void setTopCard(Card card);
-
-        int getDeckSize();
-
-        int setDeckSize();
 
         int getNumberOfWins();
 
@@ -58,7 +54,6 @@ namespace ariel {
         double getWinRate();
 
         void setWinRate(double winRate);
-
 
     };
 }

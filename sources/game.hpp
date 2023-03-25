@@ -16,7 +16,7 @@ namespace ariel {
         std::list <std::string> turnsLog;
         int numberOfTurns;
         bool isPlaying;
-        bool winner;
+        int winner;
         std::list <ariel::Card> gameDeck;
         int numberOfDraws;
 
@@ -41,6 +41,8 @@ namespace ariel {
 
         std::string toString();
 
+        std::list <std::string> getTurnsLog();
+
         Player getPlayer1();
 
         void setPlayer1(Player player);
@@ -63,7 +65,7 @@ namespace ariel {
 
         void setNumberOfTurns();
 
-        bool getWinner();
+        int getWinner();
 
         void setWinner();
 

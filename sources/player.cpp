@@ -18,17 +18,13 @@ void Player::printTurn() {}
 
 std::string Player::toString() { return ""; }
 
-Card *Player::getDeck() { return NULL; }
+std::list <Card> Player::getDeck() { return this->deck; }
 
 void Player::setDeck(Card *deck) {}
 
 Card Player::getTopCard() { return NULL; }
 
 void Player::setTopCard(Card card) {}
-
-int Player::getDeckSize() { return 0; }
-
-int Player::setDeckSize() { return 0; }
 
 int Player::getNumberOfWins() { return 0; }
 
@@ -39,3 +35,7 @@ bool Player::getIsPlaying() { return false; }
 void Player::setIsPlaying() {}
 
 std::string Player::getPlayerName() { return ""; }
+
+double Player::getWinRate() { return this->winRate; }
+
+void Player::setWinRate(double winRate) {}
