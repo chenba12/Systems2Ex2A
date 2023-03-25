@@ -1,18 +1,29 @@
+#ifndef GAME_HPP
+#define GAME_HPP
+
 #include <iostream>
 #include "player.hpp"
+#include "card.hpp"
+#include <list>
 
-using namespace std;
 namespace ariel {
 
     class Game {
-        Player player1;
-        Player player2;
-        string *turnsPlayed;
+        const static std::string cards[13];
+        const static std::string symbols[4];
+        Player &player1;
+        Player &player2;
+        std::list <std::string> turnsLog;
         int numberOfTurns;
-        string winner;
+        bool isPlaying;
+        bool winner;
+        std::list <ariel::Card> gameDeck;
+        int numberOfDraws;
 
     public:
         Game(Player &player1, Player &player2);
+
+        Game(Game &game);
 
         ~Game();
 
@@ -30,5 +41,35 @@ namespace ariel {
 
         std::string toString();
 
+        Player getPlayer1();
+
+        void setPlayer1(Player player);
+
+        Player getPlayer2();
+
+        void setPlayer2(Player player);
+
+        bool getIsPlaying();
+
+        void setIsPlaying();
+
+        std::list <ariel::Card> getGameDeck();
+
+        void createGameDeck();
+
+        void startGame();
+
+        int getNumberOfTurns();
+
+        void setNumberOfTurns();
+
+        bool getWinner();
+
+        void setWinner();
+
+        int getNumberOfDraws();
+
+        void setNumberOfDraws();
     };
 }
+#endif

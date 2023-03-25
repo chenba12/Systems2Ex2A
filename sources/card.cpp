@@ -6,6 +6,8 @@ Card::Card(string value, string symbol) {}
 
 Card::Card(Card &card);
 
+Card::Card();
+
 Card::~Card() {}
 
 int Card::checkWinner(Card card) { return 0; }

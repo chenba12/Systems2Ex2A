@@ -3,6 +3,6 @@
 #include "sources/game.hpp"
 #include "sources/card.hpp"
 
-TEST_CASE(){
+TEST_CASE(""){
 
 }

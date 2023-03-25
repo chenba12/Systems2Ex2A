@@ -1,15 +1,20 @@
+#ifndef PLAYER_HPP
+#define PLAYER_HPP
+
 #include <iostream>
 #include "card.hpp"
+#include <list>
 
 namespace ariel {
     class Player {
     private:
-        std::playerName;
-        Card *deck;
+        std::string playerName;
+        std::list <ariel::Card> deck;
         Card topCard;
         int cardsTaken;
         int getSize;
         int numberOfWins;
+        double winRate;
         bool isPlaying;
     public:
         Player(std::string playerName);
@@ -50,5 +55,11 @@ namespace ariel {
 
         std::string getPlayerName();
 
+        double getWinRate();
+
+        void setWinRate(double winRate);
+
+
     };
 }
+#endif

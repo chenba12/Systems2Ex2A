@@ -1,6 +1,9 @@
 #include "game.hpp"
 
 using namespace ariel;
+const static std::string cards[13] = {"ace", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen",
+                                      "King"};
+const static std::string symbols[4] = {"Hearts", "Spades", "Diamonds", "Clubs"};
 
 Game::Game(Player &player1, Player &player2) : player1(player1), player2(player1) {}
 
@@ -19,4 +22,34 @@ void Game::printLog() {}
 void Game::printStats() {}
 
 std::string Game::toString() { return ""; }
+
+Player Game::getPlayer1() { return this->player1; }
+
+void Game::setPlayer1(Player player) {}
+
+Player Game::getPlayer2() { return this->player2; }
+
+void Game::setPlayer2(Player player) {}
+
+bool Game::getIsPlaying() { return this->isPlaying; }
+
+void Game::setIsPlaying() {}
+
+list <Card> Game::getGameDeck() { return this->gameDeck; }
+
+void Game::createGameDeck() {}
+
+void Game::startGame() {}
+
+int Game::getNumberOfTurns() { return this->numberOfTurns; }
+
+void Game::setNumberOfTurns() {}
+
+bool Game::getWinner() { return this->winner; }
+
+void Game::setWinner() {}
+
+int Game::getNumberOfDraws() { return this->numberOfDraws; }
+
+void Game::setNumberOfDraws() {}
 
