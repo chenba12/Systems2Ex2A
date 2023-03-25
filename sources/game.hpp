@@ -28,7 +28,7 @@ namespace ariel {
 
         void printStats();
 
-        void toString();
+        std::string toString();
 
     };
 }

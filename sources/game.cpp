@@ -18,5 +18,5 @@ void Game::printLog() {}
 
 void Game::printStats() {}
 
-void Game::toString() {}
+std::string Game::toString() { return ""; }
 

@@ -1,13 +1,20 @@
 #include <iostream>
 #include "card.hpp"
 
-using namespace std;
 namespace ariel {
     class Player {
+    private:
+        std::playerName;
         Card *deck;
         Card topCard;
+        int cardsTaken;
+        int getSize;
+        int numberOfWins;
+        bool isPlaying;
     public:
-        Player(string name);
+        Player(std::string playerName);
+
+        Player(Player &player);
 
         ~Player();
 
@@ -15,9 +22,33 @@ namespace ariel {
 
         int cardesTaken();
 
+        void setCardsTaken(int cardsTaken);
+
         void printTurn();
 
-        void toString();
+        std::string toString();
+
+        Card *getDeck();
+
+        void setDeck(Card *deck);
+
+        Card getTopCard();
+
+        void setTopCard(Card card);
+
+        int getDeckSize();
+
+        int setDeckSize();
+
+        int getNumberOfWins();
+
+        void setNumberOfWins();
+
+        bool getIsPlaying();
+
+        void setIsPlaying();
+
+        std::string getPlayerName();
 
     };
 }

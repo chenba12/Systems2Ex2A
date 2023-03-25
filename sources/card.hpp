@@ -1,19 +1,20 @@
 #include <iostream>
 
-using namespace std;
 namespace ariel {
-
     class Card {
+    private:
         int value;
         string symbol;
     public:
-        Card(string value, string symbol);
+        Card(std::string value, std::string symbol);
+
+        Card(Card &card);
 
         ~Card();
 
         int checkWinner(Card card);
 
-        void toString();
+        std::string toString();
 
     };
 }
