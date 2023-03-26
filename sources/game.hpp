@@ -8,23 +8,25 @@
 #include <array>
 
 namespace ariel {
-
     class Game {
-        const static std::string cards[13];
-        const static std::string symbols[4];
+        const static int cardValues = 14;
+        const static int cardsSymbols = 4;
+        const static int gameDeckSize = 52;
+        const static std::array <std::string, cardValues> cards;
+        const static std::array <std::string, cardsSymbols> symbols;
         Player &player1;
         Player &player2;
         std::list <std::string> turnsLog;
         int numberOfTurns;
         bool isPlaying;
         int winner;
-        std::array<ariel::Card, 52> gameDeck;
+        std::array <ariel::Card, gameDeckSize> gameDeck;
         int numberOfDraws;
 
     public:
         Game(Player &player1, Player &player2);
 
-        Game(Game &game);
+        Game();
 
         ~Game();
 
@@ -56,7 +58,7 @@ namespace ariel {
 
         void setIsPlaying();
 
-        std::array<ariel::Card, 52> getGameDeck();
+        std::array <ariel::Card, gameDeckSize> getGameDeck();
 
         void createGameDeck();
 

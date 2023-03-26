@@ -9,6 +9,8 @@ const static std::string symbols[4] = {"Hearts", "Spades", "Diamonds", "Clubs"};
 
 Game::Game(Player &player1, Player &player2) : player1(player1), player2(player1) {}
 
+Game::Game() {}
+
 Game::~Game() {}
 
 void Game::playTurn() {}
@@ -39,7 +41,7 @@ bool Game::getIsPlaying() { return this->isPlaying; }
 
 void Game::setIsPlaying() {}
 
-std::array<ariel::Card, 52> Game::getGameDeck() { return this->gameDeck; }
+std::array<ariel::Card, Game::gameDeckSize> Game::getGameDeck() { return this->gameDeck; }
 
 void Game::createGameDeck() {}
 

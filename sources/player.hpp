@@ -8,9 +8,11 @@
 
 namespace ariel {
     class Player {
+        const static int playerDeckSize = 26;
+
     private:
         std::string playerName;
-        std::array<ariel::Card, 26> deck;
+        std::array <ariel::Card, playerDeckSize> deck;
         Card topCard;
         int cardsTaken;
         int getSize;
@@ -24,6 +26,7 @@ namespace ariel {
 
         ~Player();
 
+
         int stacksize();
 
         int cardesTaken();
@@ -34,7 +37,7 @@ namespace ariel {
 
         std::string toString();
 
-        std::array<ariel::Card, 26> getDeck();
+        std::array <ariel::Card, playerDeckSize> getDeck();
 
         void setDeck(Card *deck);
 

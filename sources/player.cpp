@@ -18,7 +18,7 @@ void Player::printTurn() {}
 
 std::string Player::toString() { return ""; }
 
-std::array<ariel::Card, 26> Player::getDeck() { return this->deck; }
+std::array <ariel::Card, Player::playerDeckSize> Player::getDeck() { return this->deck; }
 
 void Player::setDeck(Card *deck) {}
 
