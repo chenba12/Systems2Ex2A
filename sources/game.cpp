@@ -9,8 +9,6 @@ const static std::string symbols[4] = {"Hearts", "Spades", "Diamonds", "Clubs"};
 
 Game::Game(Player &player1, Player &player2) : player1(player1), player2(player1) {}
 
-Game::Game() {}
-
 Game::~Game() {}
 
 void Game::playTurn() {}
