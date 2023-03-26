@@ -7,7 +7,7 @@ const static std::string cards[14] = {"ace", "1", "2", "3", "4", "5", "6", "7", 
                                       "King"};
 const static std::string symbols[4] = {"Hearts", "Spades", "Diamonds", "Clubs"};
 
-Game::Game(Player &player1, Player &player2) : player1(player1), player2(player1) {}
+Game::Game(Player &player1, Player &player2) : player1(player1), player2(player2) {}
 
 Game::~Game() {}
 
